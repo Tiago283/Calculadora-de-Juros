@@ -6,10 +6,10 @@ def main(page: ft.Page):
     page.title = "Calculadora de Juros"
     page.theme_mode = ft.ThemeMode.SYSTEM
 
-    caixaj = ft.TextField(label="Juros", height=55, expand=True, keyboard_type='NUMBER', input_filter=filtro)
-    caixac = ft.TextField(label="Capital", height=55, expand=True, keyboard_type='NUMBER', input_filter=filtro)
-    caixai = ft.TextField(label="Taxa de Juros", height=55, expand=True, keyboard_type='NUMBER', input_filter=filtro)
-    caixat = ft.TextField(label="Tempo", height=55, expand=True, keyboard_type='NUMBER', input_filter=filtro)
+    caixaj = ft.TextField(label="Juros", expand=True, keyboard_type='NUMBER', input_filter=filtro)
+    caixac = ft.TextField(label="Capital", expand=True, keyboard_type='NUMBER', input_filter=filtro)
+    caixai = ft.TextField(label="Taxa de Juros", expand=True, keyboard_type='NUMBER', input_filter=filtro)
+    caixat = ft.TextField(label="Tempo", expand=True, keyboard_type='NUMBER', input_filter=filtro)
     txt_agradecimento = ft.Text(value=f"Obrigado a todos que baixaram e usaram a {page.title} de Tiago Apps! Estou muito grato pelo seu apoio.", expand=True, size=20)
     txt_agradecimento2 = ft.Text(value=f"Tem alguma ideia de como tornar a {page.title} ainda melhor? Deixe-me saber enviando um feedback!", expand=True, size=20)
     versao = ft.Text(value="Versão: 1.0.0", expand=True, size=20)
@@ -231,6 +231,7 @@ def main(page: ft.Page):
             ft.View(
                 route='/noidades',
                 controls=[
+                    ft.Text(value="", size=10),
                     ft.Row([btn_votar, ft.Text("Noidades:", size=20)]),
                     ft.Divider(thickness=3),
                     ft.Row([ft.Text(" •Criação do aplicativo", expand=True, size=20)]),
